@@ -36,4 +36,5 @@ In Quarter 1, we primarily used linear regression models to predict real estate 
 I would be interested in incorporating time series analysis and spatial data visualization to better understand the trends in property prices over time and how they vary across different neighborhoods.
 
 **I would be interested in exploring techniques such as natural language processing (NLP) to analyze free-text feedback from users or crowd workers, and unsupervised machine learning to cluster similar privacy concerns. These techniques could enhance the ability to automatically categorize and prioritize feedback, making the system more efficient.**
+
 ---
