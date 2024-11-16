@@ -1,0 +1,7 @@
+theme: cayman
+
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-feed
