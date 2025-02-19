@@ -3,10 +3,17 @@ layout: default
 title: Home
 ---
 
-# DSC180A Methodology Assignment 5
+# DSC180AB Privacy Verb - Threat Model of Privacy Dataflow 
+Max Yuen Sum Wong
+y6wong@ucsd.edu
+
+Wally Zi Chen Yu
+ziy015@ucsd.edu
 
 Chris Yuen Kei Wong 
 ykw001@ucsd.edu
+
+
 
 ## Section and Mentor
 Section B09  
