@@ -1,6 +1,6 @@
 lsi: false
 safe: true
-source: [https://github.com/KwKKei/DSC180A-Methodology-5]
+source: [https://github.com/KwKKei/DSC180AB-StaticWebsite]
 incremental: false
 highlighter: rouge
 gist:
@@ -9,5 +9,5 @@ kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
 theme: minima
-title: Methodology Assignment 5
-description: Barebones static site for DSC180A-Methodology-5
+title: Privacy Verb 
+description: Barebones static site for Privacy Verb
