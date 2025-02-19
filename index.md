@@ -28,6 +28,6 @@ Mentor: Hao Jian Jin
 
 ### Actual Page of the Application 
 
-**https://privacyio-web-n87a.vercel.app/**
+[PrivacyVerb Application](https://privacyio-web-n87a.vercel.app/)
 
 ---
