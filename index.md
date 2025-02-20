@@ -20,10 +20,27 @@ Section B09
 Mentor: Hao Jian Jin
 
 ---
+### Background
+**What is Threat Modeling?**
+Threat modeling is the process of identifying and assessing potential security threats, vulnerabilities, and risks within a system. It allows organizations to anticipate privacy and security risks and develop mitigation strategies accordingly.
+
+**Purpose of Threat Modeling**
+The primary goal of threat modeling is to provide a structured approach to analyzing privacy risks. This includes:
+1. Identifying threats that could exploit vulnerabilities in a system.
+2. Understanding how privacy risks impact individuals and organizations.
+3. Establishing a privacy risk management framework to facilitate proactive risk mitigation
 
 ### Introduction
+Privacy design decisions in software development often follow an informal and unstructured process. Managers and engineers typically start with high-level privacy principles, such as avoiding the collection of user data without consent or minimizing data retention to reduce risk, but their translation into low-level design choices is frequently guided by intuition rather than systematic evaluation. This gap leads to inconsistencies and missed opportunities for optimizing user privacy.
 
-**PrivacyVerb introduces a reusable, verb-centric approach to privacy threat modeling, shifting away from the conventional case-by-case, noun-centric design process. By abstracting privacy-relevant actions into structured verb-based units across data flows, stakeholder interactions, and individual design choices, PrivacyVerb enables practitioners to systematically compare and reuse privacy decisions. This approach improves efficiency, consistency, and accessibility, making privacy engineering more scalable and reducing the expertise needed to design privacy-sensitive data practices.**  
+To address this challenge, we propose PrivacyVerb, a new privacy design framework that helps practitioners systematically explore the privacy-related design space and make informed decisions. PrivacyVerb introduces a reusable, verb-centric approach to privacy threat modeling, shifting away from the conventional case-by-case, noun-centric design process. By abstracting privacy-relevant actions into structured verb-based units across data flows, stakeholder interactions, and individual design choices, PrivacyVerb enables practitioners to systematically compare and reuse privacy decisions. This approach improves efficiency, consistency, and accessibility, making privacy engineering more scalable and reducing the expertise needed to design privacy-sensitive data practices.
+
+### Application Feature
+
+
+
+
+
 
 
 ### Actual Page of the Application 
@@ -31,3 +48,10 @@ Mentor: Hao Jian Jin
 [PrivacyVerb Application](https://privacyio-web-n87a.vercel.app/)
 
 ---
+
+
+### Todo in the future
+1. Scientifically test privacy design choices through empirical evaluation rather than relying on intuition.
+2. Iterate and refine these decisions based on structured feedback and evidence.
+3. Dynamic Thread Modeling Result
+4. Using Akinator to generate the data flow. 
