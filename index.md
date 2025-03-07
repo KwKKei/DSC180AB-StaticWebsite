@@ -4,16 +4,14 @@ title: Home
 ---
 
 # DSC180AB Modular Threat Model Privacy Dataflow 
-Max Yuen Sum Wong
-y6wong@ucsd.edu
+Max Yuen Sum Wong  
+y6wong@ucsd.edu  
 
-Wally Zi Chen Yu
-ziy015@ucsd.edu
+Wally Zi Chen Yu  
+ziy015@ucsd.edu  
 
-Chris Yuen Kei Wong 
-ykw001@ucsd.edu
-
-
+Chris Yuen Kei Wong  
+ykw001@ucsd.edu  
 
 ## Section and Mentor
 Section B09  
@@ -25,9 +23,12 @@ Mentor: Hao Jian Jin
 In the current era, where data privacy has become a crucial issue, developers, users, and organizations need to better understand how their personal data is collected, processed, and used. Traditional methods of representing data flows in systems often focus on devices and their interconnections, which do not fully address privacy concerns. These diagrams typically show devices as components and arrows indicating the flow of data between them. While this is useful for depicting system architecture, it does not provide the transparency required to understand how data actions (e.g., collection, storage, processing, sharing) are carried out, especially in the context of privacy. This proposal outlines a new type of diagram flow that focuses on representing data actions rather than just devices. By redesigning the flow to highlight these actions, we aim to create a clearer picture of how personal data is handled, with a specific focus on privacy, ultimately enhancing transparency and trust among all stakeholders.
 
 ---
+
 ## Method 
 
 ### Layer 1: Data Action Nodes
+
+![Layer 1 Diagram](data/layer1.jpg)
 
 **Purpose:**  
 Focuses on defining core data actions such as data collection, storage, processing, and usage. Developers can customize nodes to include detailed metadata.
@@ -56,6 +57,8 @@ Focuses on defining core data actions such as data collection, storage, processi
 
 ### Layer 2: Data Interaction Nodes
 
+![Layer 2 Diagram](data/layer2.jpg)
+
 **Purpose:**  
 Represents interactions between users, stakeholders, and systems, focusing on how data is accessed, influenced, or controlled.
 
@@ -76,6 +79,8 @@ Represents interactions between users, stakeholders, and systems, focusing on ho
 ---
 
 ### Layer 3: Unenumerable Details for Storytelling
+
+![Layer 3 Diagram](data/layer3.jpg)
 
 **Purpose:**  
 Captures subjective, narrative-driven elements that provide context for data actions and user journeys, enhancing the structured layers.
@@ -98,6 +103,8 @@ Captures subjective, narrative-driven elements that provide context for data act
 
 ## Add-on Features
 
+![Threat Analysis Table](data/Threat%20Table.png)
+
 ### Threat Analysis Table
 The Threat Analysis Table extends the Privacy Storyboard platform, helping developers assess privacy risks in data workflows. It identifies, categorizes, and visualizes threats linked to data actions and interactions, allowing developers to proactively address risks early in the design process. 
 
@@ -114,6 +121,8 @@ Key threat categories include:
 - **Breach of Confidentiality:** Unauthorized data access or leaks.
 
 This feature promotes responsible and secure data practices by integrating privacy risk assessments into the design process.
+
+![User Journey Map](data/User%20Journey%20Map.png)
 
 ### User Journey Map / Noun-Based Representation Feature
 The user journey map, or noun-based representation, consolidates data flow information from multiple layers into a cohesive visualization. It highlights key data actions like collection, storage, processing, and sharing with intuitive icons and clear relationships between nodes. 
@@ -133,13 +142,6 @@ A key challenge is the manual construction of dataflow diagrams, which is time-c
 This paper presents a novel verb-based dataflow diagram approach that focuses on dynamic data actions and stakeholder interactions, providing a structured view of how data is collected, stored, processed, and used. 
 
 The integration of features like the **Threat Analysis Table** and **User Journey Map** enhances transparency and accountability in system design, helping developers align with regulations such as GDPR and CCPA. This method not only ensures compliance but also strengthens privacy resilience against emerging threats.
-
-
-
-
-
-
-
 
 ### Actual Page of the Application 
 
