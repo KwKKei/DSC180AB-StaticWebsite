@@ -22,53 +22,118 @@ Mentor: Hao Jian Jin
 ---
 
 ## Introduction
-Privacy design decisions in software development often follow an informal and unstructured process. Managers and engineers typically start with high-level privacy principles, such as avoiding the collection of user data without consent or minimizing data retention to reduce risk, but their translation into low-level design choices is frequently guided by intuition rather than systematic evaluation. This gap leads to inconsistencies and missed opportunities for optimizing user privacy.
+In the current era, where data privacy has become a crucial issue, developers, users, and organizations need to better understand how their personal data is collected, processed, and used. Traditional methods of representing data flows in systems often focus on devices and their interconnections, which do not fully address privacy concerns. These diagrams typically show devices as components and arrows indicating the flow of data between them. While this is useful for depicting system architecture, it does not provide the transparency required to understand how data actions (e.g., collection, storage, processing, sharing) are carried out, especially in the context of privacy. This proposal outlines a new type of diagram flow that focuses on representing data actions rather than just devices. By redesigning the flow to highlight these actions, we aim to create a clearer picture of how personal data is handled, with a specific focus on privacy, ultimately enhancing transparency and trust among all stakeholders.
 
-To address this challenge, we propose PrivacyVerb, a new privacy design framework that helps practitioners systematically explore the privacy-related design space and make informed decisions. PrivacyVerb introduces a reusable, verb-centric approach to privacy threat modeling, shifting away from the conventional case-by-case, noun-centric design process. By abstracting privacy-relevant actions into structured verb-based units across data flows, stakeholder interactions, and individual design choices, PrivacyVerb enables practitioners to systematically compare and reuse privacy decisions. This approach improves efficiency, consistency, and accessibility, making privacy engineering more scalable and reducing the expertise needed to design privacy-sensitive data practices.
+---
+## Method 
 
-### Data Action
-A specific operation that developers perform on users' data.
+### Layer 1: Data Action Nodes
 
+**Purpose:**  
+Focuses on defining core data actions such as data collection, storage, processing, and usage. Developers can customize nodes to include detailed metadata.
 
-- Capture: Capture users' data or sensor inputs
-- Share: Share users’ data to different parties.
-- Store: Keep users' data in a persistent storage system
-- Process: Process users’ data to derive new information
+**Features:**
+- **Node Creation:**  
+  - **Data Collection:** Points where data is gathered.  
+  - **Data Storage:** Specifies storage location and security (e.g., encryption status).  
+  - **Data Processing:** Describes transformations or analysis.  
+  - **Data Usage:** Outlines purposes for which data is used.  
 
-### Stakeholder Interaction
-Stakeholder: Any individual, group, or entity that is involved in or affected by data actions.
-Stakeholder interaction: A specific way that stakeholders engage with or are affected by data actions.
+- **Node Editor:**  
+  - Predefined options for metadata like storage period, purpose, information type, and encryption.  
+  - Free-text boxes for additional descriptions.
 
-- Consent: A data subject gives permission for specific data actions
-- Influence:: A data beneficiary/victim is impacted by a data practice
-- Request: A data subject asks to exercise their data rights
-- Audit: An auditor examines data actions for compliance with policies or regulations
-- Notify: A data observer informs data subjects about specific aspects or status of data actions.
-- Access: A data observer accesses and uses user data or derived data for a specific purpose
-- Control: A data subject controls settings that determine how their data is stored or processed 
+- **Edges:**  
+  - Represent one-way data flows between nodes.
 
+**Results:**
+- Structured representation of data actions improves transparency.  
+- Customizable nodes support compliance with privacy regulations.  
+- Enhanced usability with a minimap for navigation.  
+- Provides a foundation for Layer 2 interactions.
 
-## Thread Modeling Background
-**What is Threat Modeling?**
-Threat modeling is the process of identifying and assessing potential security threats, vulnerabilities, and risks within a system. It allows organizations to anticipate privacy and security risks and develop mitigation strategies accordingly.
+---
 
-**Purpose of Threat Modeling**
-The primary goal of threat modeling is to provide a structured approach to analyzing privacy risks. This includes:
-1. Identifying threats that could exploit vulnerabilities in a system.
-2. Understanding how privacy risks impact individuals and organizations.
-3. Establishing a privacy risk management framework to facilitate proactive risk mitigation
+### Layer 2: Data Interaction Nodes
 
-## Our Thread Modeling based on Modular Dataflow Diagram
+**Purpose:**  
+Represents interactions between users, stakeholders, and systems, focusing on how data is accessed, influenced, or controlled.
 
-## More Features
+**Predefined Interaction Nodes:**
+- **Consent:** User permissions for data actions.  
+- **Influence:** Points where users can affect data processing.  
+- **Request:** Data access or deletion requests.  
+- **Audit:** Monitoring data usage for compliance.  
+- **Notice:** Informing users about data practices.  
+- **Perform:** Automated tasks involving data.
 
-### Property Layer
+**Results:**
+- Enhances privacy visualization by mapping user interactions explicitly.  
+- Supports a range of privacy regulations with predefined and customizable nodes.  
+- Improves stakeholder awareness by linking actions to accountability.  
+- Automated positioning of nodes for clarity and readability.
 
-### Canvas Layer
+---
 
-### Thread Table
+### Layer 3: Unenumerable Details for Storytelling
 
-### Simplified Graph
+**Purpose:**  
+Captures subjective, narrative-driven elements that provide context for data actions and user journeys, enhancing the structured layers.
+
+**Features:**
+- Describes the purpose, context, stakeholders, and risks for each data action.  
+
+**Drawboard for User Journey Mapping:**
+  - Visual tool to map user experiences and privacy decisions.  
+  - Connects devices, data actions, and interactions from a user perspective.
+
+**Open-ended Storytelling:**
+  - Accommodates qualitative details beyond predefined properties.  
+  - Focuses on conveying the full context of data flows and privacy practices.
+
+**Results:**
+- Enriches data action nodes with detailed narratives.  
+- Encourages iterative development with a focus on user experience.  
+- Fosters a comprehensive understanding of privacy practices.
+
+## Add-on Features
+
+### Threat Analysis Table
+The Threat Analysis Table extends the Privacy Storyboard platform, helping developers assess privacy risks in data workflows. It identifies, categorizes, and visualizes threats linked to data actions and interactions, allowing developers to proactively address risks early in the design process. 
+
+Key threat categories include:
+- **Surveillance:** Excessive tracking or monitoring.
+- **Induced Disclosure:** Pressure to share unnecessary information.
+- **Insecurity:** Security lapses risking trust or financial loss.
+- **Unanticipated Revelation:** Accidental exposure of sensitive data.
+- **Re-identification:** Linking anonymized data back to individuals.
+- **Stigmatization:** Negative social impacts from data use.
+- **Discrimination:** Biased treatment due to data processing.
+- **Exclusion:** Denial of services based on data decisions.
+- **Unwanted Aggregation:** Invasive inferences from combined data.
+- **Breach of Confidentiality:** Unauthorized data access or leaks.
+
+This feature promotes responsible and secure data practices by integrating privacy risk assessments into the design process.
+
+### User Journey Map / Noun-Based Representation Feature
+The user journey map, or noun-based representation, consolidates data flow information from multiple layers into a cohesive visualization. It highlights key data actions like collection, storage, processing, and sharing with intuitive icons and clear relationships between nodes. 
+
+This streamlined view helps users quickly understand system-wide data flows, identify bottlenecks or privacy risks, and make informed design decisions.
+
+---
+
+## Discussion
+The current approach introduces a layer 2 schema for data actions and interactions to generalize privacy design considerations. However, this schema might not fully capture all industry practices, indicating the need for further refinement through industry surveys and case studies.
+
+A key challenge is the manual construction of dataflow diagrams, which is time-consuming. A potential solution is integrating **Privacy Akinator**—an intelligent system that guides developers through privacy considerations using a dynamic Q&A approach based on the 4W1H methodology and FIPP’s eight dimensions. This system could automate privacy assessments, reducing manual effort and improving efficiency.
+
+---
+
+## Conclusion
+This paper presents a novel verb-based dataflow diagram approach that focuses on dynamic data actions and stakeholder interactions, providing a structured view of how data is collected, stored, processed, and used. 
+
+The integration of features like the **Threat Analysis Table** and **User Journey Map** enhances transparency and accountability in system design, helping developers align with regulations such as GDPR and CCPA. This method not only ensures compliance but also strengthens privacy resilience against emerging threats.
+
 
 
 
@@ -79,12 +144,3 @@ The primary goal of threat modeling is to provide a structured approach to analy
 ### Actual Page of the Application 
 
 [PrivacyVerb Application](https://privacyio-web-n87a.vercel.app/)
-
----
-
-
-### Todo in the future
-1. Scientifically test privacy design choices through empirical evaluation rather than relying on intuition.
-2. Iterate and refine these decisions based on structured feedback and evidence.
-3. Dynamic Thread Modeling Result
-4. Using Akinator to generate the data flow. 
