@@ -3,24 +3,28 @@ layout: default
 title: Home
 ---
 
-# DSC180AB Modular Threat Model Privacy Dataflow 
-Max Yuen Sum Wong  
-y6wong@ucsd.edu  
+# Verb-Based Dataflow Diagram for Privacy Design
 
-Wally Zi Chen Yu  
-ziy015@ucsd.edu  
-
-Chris Yuen Kei Wong  
-ykw001@ucsd.edu  
+## Contributors
+- **Max Yuen Sum Wong** (<y6wong@ucsd.edu>)
+- **Zichen Yu** (<ziy015@ucsd.edu>)
+- **Chris Yuen Kei Wong** (<ykw001@ucsd.edu>)
 
 ## Section and Mentor
-Section B09  
-Mentor: Hao Jian Jin
+- **Section:** B09  
+- **Mentor:** [Haojian Jin](https://www.haojianj.in/home.html)
 
----
+## Resources
+- **Code Repository:** [GitHub - PrIDE-web](https://github.com/DataSmithLab/PrIDE-web/tree/master)
+- **Paper:** [Project Paper](https://drive.google.com/file/d/1IRKbKV3r8OxFjIFqsD_eKQoeYOBJIJnR/view?usp=sharing)
+
 
 ## Introduction
-In the current era, where data privacy has become a crucial issue, developers, users, and organizations need to better understand how their personal data is collected, processed, and used. Traditional methods of representing data flows in systems often focus on devices and their interconnections, which do not fully address privacy concerns. These diagrams typically show devices as components and arrows indicating the flow of data between them. While this is useful for depicting system architecture, it does not provide the transparency required to understand how data actions (e.g., collection, storage, processing, sharing) are carried out, especially in the context of privacy. This proposal outlines a new type of diagram flow that focuses on representing data actions rather than just devices. By redesigning the flow to highlight these actions, we aim to create a clearer picture of how personal data is handled, with a specific focus on privacy, ultimately enhancing transparency and trust among all stakeholders.
+In an era where data privacy is paramount, the tools we use to visualize data flows must evolve to meet modern challenges. Traditional data flow diagrams tend to adopt a noun-based approach, framing systems primarily as collections of devices and static components. This method often omits essential details—such as data collection methods, processing steps, storage durations, and other contextual metadata—leaving developers with an incomplete picture of how sensitive information is managed. Moreover, reliance on device-specific modules (e.g., phones, computers, IoT devices) restricts flexibility, especially in today’s heterogeneous technological environments.
+
+Our work, building on insights from the paper "Verb-Based Dataflow Diagram for Privacy Design," introduces a transformative shift: focusing on the actions—the verbs—that define data actions, and stakeholder interactions. By centering on data actions (like collecting, processing, sharing, and storing), we capture a more dynamic and comprehensive view of data flows. This verb-based approach not only details the specific operations influencing data privacy but also integrates critical metadata (such as collection types and data retention periods) directly into each enumerable property of the diagram.
+
+Designed with developers in mind—particularly those engaged in product development and decision-making—this method addresses common challenges faced with existing tools. It empowers teams to visualize and communicate complex data processes more clearly and accurately, thereby fostering greater transparency and trust. Ultimately, by shifting from static, device-centric diagrams to a dynamic, action-oriented paradigm, our approach enables more precise design and robust privacy compliance in an increasingly data-driven world.
 
 ---
 
